@@ -1,21 +1,24 @@
 public class BMI {
 
+    public static final double POUNDSTOKG =  0.45359237;
+    public static final double INCHESTOMETRES = 0.0254;
+
     private double weight;
     private double height;
     private double bmi;
     private String bmiInterpretation;
 
     public BMI(double weight, double height) {
-        this.weight = weight * 0.45359237;
-        this.height = height * 0.0254;
+        this.weight = weight * POUNDSTOKG;
+        this.height = height * INCHESTOMETRES;
     }
 
     public void setWeight(double weight) {
-        this.weight = weight;
+        this.weight = weight * POUNDSTOKG;
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        this.height = height * INCHESTOMETRES;
     }
 
     public double getWeight() {
